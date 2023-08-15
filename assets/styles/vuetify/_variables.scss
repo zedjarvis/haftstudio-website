@@ -1,0 +1,7 @@
+@use "../fonts.scss";
+
+$font-inter: Inter, sans-serif;
+
+@use "vuetify/settings" with (
+    $body-font-family: $font-inter
+);
