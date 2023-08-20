@@ -5,14 +5,11 @@ definePageMeta({
 })
 
 useHead({
-  title: 'About',
+  title: 'About Us',
 })
 </script>
 
 <template>
-  <section class="hero">
-    <VSheet class="h-screen">
-      <h1>THIS IS THE ABOUT PAGE</h1>
-    </VSheet>
-  </section>
+  <!-- ABOUT SECTION  -->
+  <IndexAboutSection />
 </template>
