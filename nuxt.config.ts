@@ -18,10 +18,10 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-typed-router',
     '@pinia/nuxt',
-    // '@sidebase/nuxt-pdf',
+    '@sidebase/nuxt-pdf',
     '@nuxtjs/i18n',
-    // '@tresjs/nuxt',
-    // 'nuxt3-leaflet',
+    '@tresjs/nuxt',
+    'nuxt3-leaflet',
     // '@productdevbook/chatwoot',
     // '@nuxtjs/partytown',
   ],
@@ -52,6 +52,7 @@ export default defineNuxtConfig({
         VBtn: {
           color: 'secondary',
           rounded: 0,
+          ripple: false,
         }
       }
     }
