@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 interface Error {
   url: string;
   statusCode: Number;
@@ -13,8 +14,16 @@ const props = defineProps<{
 
 const error = toRef(props, 'error')
 
+// appropriate title
 useHead({
   title: `${error.value.statusCode}: ${error.value.statusMessage}`
+})
+
+// change title when an error is encountered while still on error page
+watch(error, () => {
+  useHead({
+    title: `${error.value.statusCode}: ${error.value.statusMessage}`
+  })
 })
 </script>
 
