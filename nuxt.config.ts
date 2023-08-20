@@ -7,9 +7,9 @@ export default defineNuxtConfig({
   },
   css: ['@mdi/font/css/materialdesignicons.css', '/assets/styles/main.scss'],
   modules: [
-    '@vite-pwa/nuxt',
-    '@invictus.codes/nuxt-vuetify',
-    // 'vuetify-nuxt-module',
+    // '@vite-pwa/nuxt',
+    // '@invictus.codes/nuxt-vuetify',
+    'vuetify-nuxt-module',
     '@unocss/nuxt',
     'nuxt-seo-experiments',
     '@nuxtjs/robots',
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     // '@productdevbook/chatwoot',
     // '@nuxtjs/partytown',
   ],
-  pwa: {},
+  // pwa: {},
   pinia: {
     autoImports: [
       'defineStore', 'storeToRefs',
@@ -38,6 +38,9 @@ export default defineNuxtConfig({
   vuetify: {
     moduleOptions: {
       styles: "sass",
+      // autoImport: true,
+      // treeshaking: true,
+      // useIconCDN: false,
     },
     vuetifyOptions: {
       theme: {
