@@ -12,7 +12,7 @@ const link = computed(() => url?.value ? url.value : title.value)
 
 <template>
   <NuxtLink :to="link">
-    <p class="nav-link">{{ $t(props.title) }}
+    <p class="nav-link">{{ title }}
     </p>
   </NuxtLink>
 </template>

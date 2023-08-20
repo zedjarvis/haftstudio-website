@@ -2,9 +2,6 @@
 // composables
 import { useWindowScroll, useWindowSize } from "@vueuse/core";
 
-// store
-import { useAppStore } from '~/store';
-
 // props
 // export interface Props {
 //   flat?: boolean;
@@ -17,35 +14,14 @@ import { useAppStore } from '~/store';
 // })
 
 // variables
-const appStore = useAppStore();
-const { locale } = useI18n();
 const { x, y } = useWindowScroll();
 const { height, width } = useWindowSize();
 const drawer = ref<boolean | null>(null);
 
-// computed refs
-const appLocale = computed({
-  get: () => appStore.getLocale,
-  set: val => appStore.setLocale(val)
-})
 
 // const isScrolling = computed(() => y.value > 0)
 // const showBackTop = computed(() => y.value > height.value + 64)
 
-// functions
-const changeLocale = (locale: string) => {
-  appLocale.value = locale
-}
-
-// hooks
-onMounted(() => {
-  locale.value = appLocale.value
-})
-
-watch(appLocale, () => {
-  locale.value = appLocale.value
-  console.log(appLocale.value, appStore.locale)
-})
 </script>
 
 <template>
@@ -63,7 +39,7 @@ watch(appLocale, () => {
       <Navlink title="Blog" />
       <Navlink title="contact" />
       <VSpacer></VSpacer>
-      <LocaleMenu :locale="appLocale" @change-locale="changeLocale" />
+      <!-- <LocaleMenu /> -->
       <SearchItem />
       <!-- <VBtn size="small" variant="plain" class="pa-0 ma-0" icon :ripple="false">
         <VIcon>mdi-shopping-outline</VIcon> 0
@@ -75,18 +51,22 @@ watch(appLocale, () => {
     <VToolbar>
       <SearchItem />
       <VSpacer></VSpacer>
-      <LocaleMenu :locale="appLocale" @change-locale="changeLocale" />
+      <!-- <LocaleMenu /> -->
       <VSpacer></VSpacer>
       <VBtn color="secondary" variant="plain" icon="mdi-close" @click="drawer = false"></VBtn>
     </VToolbar>
     <VList class="d-flex flex-column justify-center text-center">
+      <NavLinkMobile url="/" title="home" />
+      <VDivider></VDivider>
       <NavLinkMobile title="products" />
+      <VDivider></VDivider>
+      <NavLinkMobile title="projects" />
       <VDivider></VDivider>
       <NavLinkMobile title="company" />
       <VDivider></VDivider>
       <NavLinkMobile title="designers" />
       <VDivider></VDivider>
-      <NavLinkMobile title="work" />
+      <NavLinkMobile title="blog" />
       <VDivider></VDivider>
       <NavLinkMobile title="contact" />
       <VDivider></VDivider>

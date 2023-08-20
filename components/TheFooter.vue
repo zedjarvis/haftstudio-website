@@ -13,11 +13,11 @@ const { xs } = useDisplay()
           <VDivider :vertical="!xs"></VDivider>
           <Navlink class="mx-auto mx-md-4 py-4 py-md-2" title="products" />
           <VDivider :vertical="!xs"></VDivider>
+          <Navlink class="mx-auto mx-md-4 py-4 py-md-2" title="Projects" />
+          <VDivider :vertical="!xs"></VDivider>
           <Navlink class="mx-auto mx-md-4 py-4 py-md-2" title="company" />
           <VDivider :vertical="!xs"></VDivider>
           <Navlink class="mx-auto mx-md-4 py-4 py-md-2" title="Designers" />
-          <VDivider :vertical="!xs"></VDivider>
-          <Navlink class="mx-auto mx-md-4 py-4 py-md-2" title="Projects" />
           <VDivider :vertical="!xs"></VDivider>
           <Navlink class="mx-auto mx-md-4 py-4 py-md-2" title="Blog" />
           <VDivider :vertical="!xs"></VDivider>

@@ -5,7 +5,7 @@ const dialog = ref(false)
 </script>
 
 <template>
-  <VBtn id="search" size="small" @click="dialog = true" :ripple="false" class="ma-0 pa-0" variant="plain" icon>
+  <VBtn id="search" size="x-small" @click="dialog = true" :ripple="false" class="ma-0 pa-0" variant="plain" icon>
     <VIcon icon="i-carbon-search"></VIcon>
   </VBtn>
 

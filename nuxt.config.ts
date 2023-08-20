@@ -2,10 +2,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: true,
-  css: ['/assets/styles/main.scss'],
+  devServer: {
+    port: 6490,
+  },
+  css: ['@mdi/font/css/materialdesignicons.css', '/assets/styles/main.scss'],
   modules: [
     '@vite-pwa/nuxt',
-    'vuetify-nuxt-module',
+    '@invictus.codes/nuxt-vuetify',
+    // 'vuetify-nuxt-module',
     '@unocss/nuxt',
     'nuxt-seo-experiments',
     '@nuxtjs/robots',
@@ -19,12 +23,13 @@ export default defineNuxtConfig({
     'nuxt-typed-router',
     '@pinia/nuxt',
     '@sidebase/nuxt-pdf',
-    '@nuxtjs/i18n',
+    // '@nuxtjs/i18n',
     '@tresjs/nuxt',
     'nuxt3-leaflet',
     // '@productdevbook/chatwoot',
     // '@nuxtjs/partytown',
   ],
+  pwa: {},
   pinia: {
     autoImports: [
       'defineStore', 'storeToRefs',

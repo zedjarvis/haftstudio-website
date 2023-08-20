@@ -2,12 +2,17 @@
 // props
 const props = defineProps<{
   title: string;
+  url?: string;
 }>();
+
+const { title, url } = toRefs(props);
+
+const link = computed(() => url?.value ? url.value : title.value)
 </script>
 
 <template>
-  <NuxtLink :to="`${props.title}`">
-    <VListItem class="nav-link" :title="$t(props.title)">
+  <NuxtLink :to="link">
+    <VListItem class="nav-link" :title="title">
     </VListItem>
   </NuxtLink>
 </template>
