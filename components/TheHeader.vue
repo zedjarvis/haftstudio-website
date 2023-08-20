@@ -5,10 +5,16 @@ import { useWindowScroll, useWindowSize } from "@vueuse/core";
 // store
 import { useAppStore } from '~/store';
 
+// props
+// export interface Props {
+//   flat?: boolean;
+//   scrollBehavior: string;
+// }
 
-useHead({
-  titleTemplate: "%s ← Haft Studio",
-})
+// const props = withDefaults(defineProps<Props>(), {
+//   flat: true,
+//   scrollBehavior: 'elevate hide',
+// })
 
 // variables
 const appStore = useAppStore();
@@ -23,7 +29,8 @@ const appLocale = computed({
   set: val => appStore.setLocale(val)
 })
 
-const showBackTop = computed(() => y.value > height.value + 64)
+// const isScrolling = computed(() => y.value > 0)
+// const showBackTop = computed(() => y.value > height.value + 64)
 
 // functions
 const changeLocale = (locale: string) => {
@@ -42,23 +49,27 @@ watch(appLocale, () => {
 </script>
 
 <template>
-  <VToolbar class="md:pl-16 md:pr-2">
-    <VToolbarTitle class="md:ml--16">
+  <VToolbar :elevation="1" class="d-flex justify-between pl-md-16 pr-md-2"
+    style="background-color: rgb(var(--v-theme-background));">
+    <VAppBarTitle class="ml-md-16">
       <Logo />
-    </VToolbarTitle>
-    <VSpacer></VSpacer>
-    <div class="hidden lg:flex gap-8 items-center">
+    </VAppBarTitle>
+    <VToolbarItems class="d-none d-md-flex items-center space-x-8">
+      <Navlink title="Home" url="/" />
       <Navlink title="products" />
+      <Navlink title="projects" />
       <Navlink title="company" />
       <Navlink title="designers" />
-      <Navlink title="work" />
+      <Navlink title="Blog" />
       <Navlink title="contact" />
+      <VSpacer></VSpacer>
       <LocaleMenu :locale="appLocale" @change-locale="changeLocale" />
       <SearchItem />
-    </div>
-    <div class="flex lg:hidden mx-3">
-      <VBtn color="secondary" variant="plain" icon="mdi-menu" @click="drawer = true"></VBtn>
-    </div>
+      <!-- <VBtn size="small" variant="plain" class="pa-0 ma-0" icon :ripple="false">
+        <VIcon>mdi-shopping-outline</VIcon> 0
+      </VBtn> -->
+    </VToolbarItems>
+    <VBtn class="d-flex d-md-none" color="secondary" variant="plain" icon="mdi-menu" @click="drawer = true"></VBtn>
   </VToolbar>
   <VNavigationDrawer location="top" v-model="drawer" temporary width="auto">
     <VToolbar>

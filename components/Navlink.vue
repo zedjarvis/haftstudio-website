@@ -2,11 +2,16 @@
 // props
 const props = defineProps<{
   title: string;
+  url?: string;
 }>();
+
+const { title, url } = toRefs(props);
+
+const link = computed(() => url?.value ? url.value : title.value)
 </script>
 
 <template>
-  <NuxtLink :to="`${props.title}`">
+  <NuxtLink :to="link">
     <p class="nav-link">{{ $t(props.title) }}
     </p>
   </NuxtLink>
@@ -15,7 +20,7 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .nav-link {
   font-family: Inter, 'Source sans pro', sans-serif;
-  font-size: .75rem !important;
+  font-size: .70rem !important;
   line-height: 1rem !important;
   text-transform: capitalize !important;
   color: rgb(var(--v-theme-secondary));

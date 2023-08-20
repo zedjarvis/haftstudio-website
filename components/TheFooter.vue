@@ -9,13 +9,11 @@ const { xs } = useDisplay()
     <VContainer fluid class="w-full h-full ma-0 pa-0 bg-surface">
       <VRow no-gutters class="px-md-16">
         <VCol class="d-flex flex-column flex-md-row justify-center mt-5 py-5">
-          <Navlink class="mx-auto mx-md-4 py-4 py-md-2" title="home" />
+          <Navlink class="mx-auto mx-md-4 py-4 py-md-2" url="/" title="home" />
           <VDivider :vertical="!xs"></VDivider>
           <Navlink class="mx-auto mx-md-4 py-4 py-md-2" title="products" />
           <VDivider :vertical="!xs"></VDivider>
           <Navlink class="mx-auto mx-md-4 py-4 py-md-2" title="company" />
-          <VDivider :vertical="!xs"></VDivider>
-          <Navlink class="mx-auto mx-md-4 py-4 py-md-2" title="Shop" />
           <VDivider :vertical="!xs"></VDivider>
           <Navlink class="mx-auto mx-md-4 py-4 py-md-2" title="Designers" />
           <VDivider :vertical="!xs"></VDivider>
@@ -28,25 +26,24 @@ const { xs } = useDisplay()
         </VCol>
       </VRow>
       <VRow no-gutters>
-        <VCol cols="12" class="d-flex justify-center pa-5 mb-8">
+        <VCol cols="12" class="d-flex justify-center pa-3 pa-md-5 mb-4 mb-md-8">
           <VBtn color="primary" rounded variant="text" icon="mdi-twitter"></VBtn>
           <VBtn color="primary" rounded variant="text" icon="mdi-instagram"></VBtn>
           <VBtn color="primary" rounded variant="text" icon="mdi-pinterest"></VBtn>
         </VCol>
       </VRow>
-      <VRow no-gutters class="footer-footer d-flex flex-column flex-md-row items-center w-full bg-secondary p-5 px-md-16">
-        <p>&copy; 2011 - {{ new Date().getFullYear() }} Haftstudio.ke | All Rights Reserved.</p>
+      <VRow no-gutters
+        class="footer-footer d-flex flex-column-reverse flex-md-row items-center text-center w-full bg-secondary py-5 px-md-16">
+        <p class="py-1">&copy; 2011 - {{ new Date().getFullYear() }} Haftstudio.ke | All Rights Reserved.</p>
         <VSpacer class="d-none d-md-flex"></VSpacer>
         <NuxtLink to="/">
-          <p class="px-1 text-background">Terms of Use.</p>
+          <p class="px-1 py-1 text-background">Terms of Use.</p>
         </NuxtLink>
-        <VDivider v-if="xs" :vertical="!xs"></VDivider>
         <NuxtLink to="/">
-          <p class="px-1 text-background">Privacy Policy.</p>
+          <p class="px-1 py-1 text-background">Privacy Policy.</p>
         </NuxtLink>
-        <VDivider v-if="xs" :vertical="!xs"></VDivider>
         <NuxtLink to="/">
-          <p class="px-1 text-background">SiteMap.</p>
+          <p class="px-1 py-1 text-background">SiteMap.</p>
         </NuxtLink>
         <div class="bottom-block"></div>
       </VRow>

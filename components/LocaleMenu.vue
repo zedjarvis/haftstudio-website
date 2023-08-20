@@ -23,7 +23,7 @@ const menu = ref(false)
         <VListItem density="compact" title="EN" @click="$emit('changeLocale', 'en')" />
         <VListItem density="compact" title="SW" @click="$emit('changeLocale', 'sw')" />
         <VListItem density="compact" title="FR" @click="$emit('changeLocale', 'fr')" />
-        <VListItem density="compact" title="拼音" @click="$emit('changeLocale', 'zh')" />
+        <VListItem density="compact" title="中国人" @click="$emit('changeLocale', 'zh')" />
       </VList>
     </VMenu>
   </VBtn>
