@@ -3,7 +3,7 @@
 
 <template>
   <TheHeader />
-  <VMain>
+  <VMain tag="main">
     <slot />
   </VMain>
   <TheFooter />
