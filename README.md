@@ -1,39 +1,44 @@
-# HAFT STUDIO WEBSITE
+# default
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Project setup
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
+```
 # yarn
-yarn install
+yarn
+
+# npm
+npm install
+
+# pnpm
+pnpm install
 ```
 
-## Development Server
+### Compiles and hot-reloads for development
 
-Start the development server on `http://localhost:3000`:
-
-```bash
+```
 # yarn
 yarn dev
+
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
 ```
 
-## Production
+### Compiles and minifies for production
 
-Build the application for production:
-
-```bash
+```
 # yarn
-yarn generate
+yarn build
+
+# npm
+npm run build
+
+# pnpm
+pnpm build
 ```
 
-Locally preview production build:
+### Customize configuration
 
-```bash
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+See [Configuration Reference](https://vitejs.dev/config/).
