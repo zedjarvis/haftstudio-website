@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // seo
 useHead({
-  titleTemplate: '%s | Haft Studio',
   title: 'Contact Us',
 })
 

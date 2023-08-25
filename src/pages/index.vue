@@ -16,6 +16,11 @@ onMounted(() => {
 watch(y, () => {
   scrollPos.value = y.value
 })
+
+// seo
+useHead({
+  title: "Home",
+})
 </script>
 
 <template>
