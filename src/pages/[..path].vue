@@ -7,6 +7,14 @@ const currentRoute = ref(route.fullPath)
 
 watch(route, () => {
   currentRoute.value = route.fullPath
+  useHead({
+    title: `Error 404: Page not Fount ${currentRoute.value}`
+  })
+})
+
+// seo
+useHead({
+  title: `Error 404: Page not Fount ${currentRoute.value}`
 })
 </script>
 
