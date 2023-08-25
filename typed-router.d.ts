@@ -42,7 +42,7 @@ declare module 'vue-router/auto/routes' {
     'HomePage': RouteRecordInfo<'HomePage', '/', Record<never, never>, Record<never, never>>,
     '/[..path]': RouteRecordInfo<'/[..path]', '/:ath(.*)', { ath: ParamValue<true> }, { ath: ParamValue<false> }>,
     'AboutPage': RouteRecordInfo<'AboutPage', '/company', Record<never, never>, Record<never, never>>,
-    '/contact': RouteRecordInfo<'/contact', '/contact', Record<never, never>, Record<never, never>>,
+    'ContactPage': RouteRecordInfo<'ContactPage', '/contact', Record<never, never>, Record<never, never>>,
   }
 }
 
