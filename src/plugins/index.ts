@@ -8,6 +8,7 @@
 // import { loadFonts } from './webfontloader'
 import router from '../router'
 import pinia from '../store'
+import head from './unhead'
 import vuetify from './vuetify'
 
 // Types
@@ -19,4 +20,5 @@ export function registerPlugins(app: App) {
     .use(vuetify)
     .use(router)
     .use(pinia)
+    .use(head)
 }
