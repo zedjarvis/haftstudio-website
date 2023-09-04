@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AboutSection: typeof import('./src/components/Homepage/AboutSection.vue')['default']
+    BlogCard: typeof import('./src/components/Homepage/BlogCard.vue')['default']
     BlogSection: typeof import('./src/components/Homepage/BlogSection.vue')['default']
     CustomContainer: typeof import('./src/components/CustomContainer.vue')['default']
     FeaturedProductCard: typeof import('./src/components/Homepage/FeaturedProductCard.vue')['default']
@@ -17,6 +18,7 @@ declare module 'vue' {
     Navlink: typeof import('./src/components/Header/Navlink.vue')['default']
     NavlinkMobile: typeof import('./src/components/Header/NavlinkMobile.vue')['default']
     ProfessionalSection: typeof import('./src/components/Homepage/ProfessionalSection.vue')['default']
+    ProfessionalSectionCard: typeof import('./src/components/Homepage/ProfessionalSectionCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Search: typeof import('./src/components/Header/Search.vue')['default']
