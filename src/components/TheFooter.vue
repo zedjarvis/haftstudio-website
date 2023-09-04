@@ -10,10 +10,11 @@ const { width } = useWindowSize()
 
 <template>
   <VFooter class="footer pa-0 bg-background position-relative" :style="{ width: `${width}px` }">
-    <div class="top-block"></div>
-    <VContainer fluid class="w-100 h-100 ma-0 pa-0 bg-surface">
+    <!-- <div class="top-block"></div> -->
+    <VContainer fluid class="w-100 h-100 ma-0 pa-0 bg-surface pt-5 pt-md-10">
+      <p class="subtitle text-center">Popular Links</p>
       <VRow no-gutters class="px-md-16">
-        <VCol class="d-flex flex-column flex-md-row justify-center mt-5 py-3">
+        <VCol class="d-flex flex-column flex-md-row justify-center py-3">
           <Navlink class="mx-auto mx-md-6 py-4 py-md-1" url="/" title="home" />
           <VDivider :vertical="!xs"></VDivider>
           <Navlink class="mx-auto mx-md-6 py-4 py-md-2" title="products" />
@@ -24,8 +25,8 @@ const { width } = useWindowSize()
           <VDivider :vertical="!xs"></VDivider>
           <Navlink class="mx-auto mx-md-6 py-4 py-md-2" title="designers" />
           <VDivider :vertical="!xs"></VDivider>
-          <Navlink class="mx-auto mx-md-6 py-4 py-md-2" title="blog" />
-          <VDivider :vertical="!xs"></VDivider>
+          <!-- <Navlink class="mx-auto mx-md-6 py-4 py-md-2" title="blog" />
+          <VDivider :vertical="!xs"></VDivider> -->
           <Navlink class="mx-auto mx-md-6 py-4 py-md-2" title="contact" />
           <VDivider v-if="xs" :vertical="!xs"></VDivider>
         </VCol>

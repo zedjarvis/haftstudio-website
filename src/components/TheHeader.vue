@@ -39,15 +39,15 @@ const { mdAndUp } = useDisplay()
       <VDivider></VDivider>
       <NavlinkMobile title="designers" />
       <VDivider></VDivider>
-      <NavlinkMobile title="blog" />
-      <VDivider></VDivider>
+      <!-- <NavlinkMobile title="blog" />
+      <VDivider></VDivider> -->
       <NavlinkMobile title="contact" />
       <VDivider></VDivider>
     </VList>
   </VNavigationDrawer>
 
   <!-- 👉 DESKTOP NAV  -->
-  <VAppBar :elevation="props.elevation ? 3 : undefined" :flat="props.flat" :scroll-behavior="props.scrollBehavior"
+  <VToolbar :elevation="props.elevation ? 3 : undefined" :flat="props.flat" :scroll-behavior="props.scrollBehavior"
     scroll-threshold="64" class="pl-md-16 d-flex bg-background">
     <VAppBarNavIcon flat class="d-flex d-md-none" color="secondary" variant="plain" @click="drawer = true">
     </VAppBarNavIcon>
@@ -62,12 +62,12 @@ const { mdAndUp } = useDisplay()
       <Navlink class="mx-3" title="projects" />
       <Navlink class="mx-3" title="company" />
       <Navlink class="mx-3" title="designers" />
-      <Navlink class="mx-3" title="blog" />
+      <!-- <Navlink class="mx-3" title="blog" /> -->
       <Navlink class="mx-3" title="contact" />
       <!-- 👉 SEARCH  -->
       <Search />
     </VToolbarItems>
     <VBtn variant="plain" :size="mdAndUp ? 'small' : 'default'" icon="mdi-account-outline" />
     <VBtn variant="plain" :size="mdAndUp ? 'small' : 'default'" icon="mdi-shopping-outline" />
-  </VAppBar>
+  </VToolbar>
 </template>

@@ -9,12 +9,12 @@ const props = defineProps<{
 </script>
 
 <template>
-  <VCard :elevation="3" class="bg-background pb-10">
+  <VCard rounded="0" :elevation="0" class="bg-background pb-0">
     <RouterLink to="/">
-      <VImg :src="props.image" height="435" cover />
+      <VImg :src="props.image" :height="333" cover />
     </RouterLink>
     <RouterLink to="/">
-      <p class="pt-4 font-pacifico text-xl text-secondary line-clamp-1 mb-8">{{ props.title }}</p>
+      <p class="pt-4 font-pacifico text-xl text-secondary line-clamp-1 mb-8" style="font-weight: 100;">{{ props.title }}</p>
     </RouterLink>
     <RouterLink to="/">
       <p class="mt-2 d-block w-full p-2 text-center text-xs font-description font-italic text-primary">{{ props.designer

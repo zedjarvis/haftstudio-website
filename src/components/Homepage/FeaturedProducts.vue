@@ -10,21 +10,23 @@ import nevaLounge from "@/assets/images/neva_lounge_trimmed_cover.jpg";
 
 <template>
   <CustomContainer section-id="products" sheet-style="bg-background text-center">
-    <p class="subtitle">Featured products</p>
-    <h3 class="title">Bestsellers</h3>
-    <VRow class="md-px-10 mt-8 h-100">
-      <VCol cols="6" md="3">
-        <FeaturedProductCard :image="nevaChair" title="Neva Chair" designer="Haft Studio" />
-      </VCol>
-      <VCol cols="6" md="3">
-        <FeaturedProductCard :image="invitoTable" title="Invito Table" designer="Haft Studio" />
-      </VCol>
-      <VCol cols="6" md="3">
-        <FeaturedProductCard :image="nevaLounge" title="Neva Lounge" designer="Haft Studio" />
-      </VCol>
-      <VCol cols="6" md="3">
-        <FeaturedProductCard :image="latusTable" title="Latus Table" designer="Haft Studio" />
-      </VCol>
-    </VRow>
+    <VResponsive class="mx-auto">
+      <p class="subtitle">Featured products</p>
+      <h3 class="title">Bestsellers</h3>
+      <VRow class="px-sm-16 mt-8">
+        <VCol cols="6" md="3">
+          <FeaturedProductCard :image="nevaChair" title="Neva Chair" designer="Haft Studio" />
+        </VCol>
+        <VCol cols="6" md="3">
+          <FeaturedProductCard :image="invitoTable" title="Invito Table" designer="Haft Studio" />
+        </VCol>
+        <VCol cols="6" md="3">
+          <FeaturedProductCard :image="nevaLounge" title="Neva Lounge" designer="Haft Studio" />
+        </VCol>
+        <VCol cols="6" md="3">
+          <FeaturedProductCard :image="latusTable" title="Latus Table" designer="Haft Studio" />
+        </VCol>
+      </VRow>
+    </VResponsive>
   </CustomContainer>
 </template>

@@ -15,14 +15,23 @@ import img9 from '@/assets/images/9.jpg';
 // variables
 const { width, height } = useWindowSize()
 const carouselItem = useLocalStorage('hero-carousel-item', 1)
+const { name, xs } = useDisplay()
+
+const sectionHeight = computed(() => {
+    switch (name.value) {
+      case 'xs': return height.value - 72
+      case 'sm': return 'auto'
+    }
+    return height.value
+})
 </script>
 
 <template>
   <section id="hero">
     <VSheet>
-      <VCard rounded="0" elevation="0" :width="width" :height="height">
-        <VCarousel :height="height" v-model="carouselItem" touch continuous cycle show-arrows="hover"
-          hide-delimiter-background>
+      <VCard rounded="0" elevation="0" :width="width" :height="sectionHeight">
+        <VCarousel :height="sectionHeight" v-model="carouselItem" touch continuous cycle :show-arrows="xs ? false : false"
+          hide-delimiter-background :hide-delimiters="xs">
           <VCarouselItem :value="1" :src="img1" cover />
           <VCarouselItem :value="2" :src="img2" cover />
           <VCarouselItem :value="3" :src="img3" cover />

@@ -13,7 +13,7 @@ const { smAndDown } = useDisplay()
 
   <VDialog v-model="dialog" fullscreen :scrim="false">
     <VCard>
-      <VToolbar class="pl-md-16" style="background-color: rgb(var(--v-theme-surface));">
+      <VToolbar class="pl-md-16 pr-4 pr-md-0" style="background-color: rgb(var(--v-theme-surface));">
         <VToolbarTitle class="ml-md-16">
           <!-- 👉 LOGO  -->
           <TheLogo />
@@ -22,8 +22,8 @@ const { smAndDown } = useDisplay()
         <VBtn :size="smAndDown ? '' : 'small'" color="primary" variant="plain" icon @click="dialog = false">
           <VIcon icon="mdi-close"></VIcon>
         </VBtn>
-        <VBtn variant="plain" color="primary" size="small" icon="mdi-account-outline" />
-        <VBtn variant="plain" color="primary" size="small" icon="mdi-shopping-outline" />
+        <VBtn class="d-none d-md-flex" variant="plain" color="primary" size="small" icon="mdi-account-outline" />
+        <VBtn class="d-none d-md-flex" variant="plain" color="primary" size="small" icon="mdi-shopping-outline" />
       </VToolbar>
       <VContainer class="h-100 text-center">
         <VResponsive width="700" class="mx-auto">
