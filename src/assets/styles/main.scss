@@ -45,11 +45,25 @@ a {
 }
 
 .title {
-    margin-top: 0.25rem;
+    // margin-top: 0.25rem;
     margin-bottom: 3rem;
     font-size: 1.875rem;
     line-height: 2.25rem;
     font-family: Pacifico;
     font-style: italic;
     color: rgb(var(--v-theme-secondary));
+}
+
+.text-xs {
+    font-size: 0.75rem;
+    /* 12px */
+    line-height: 1rem;
+    /* 16px */
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    /* 20px */
+    line-height: 1.75rem;
+    /* 28px */
 }
