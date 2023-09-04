@@ -36,6 +36,9 @@ export default defineConfig({
             'useLocalStorage',
             'useWindowScroll',
           ]
+        },
+        {
+          'vuetify': ['useTheme', 'useDisplay']
         }
       ]
     }),
