@@ -28,8 +28,8 @@ export default createVuetify({
   },
   defaults: {
     VBtn: {
-      rounded: 0,
-      color: 'secondary',
+      // rounded: 0,
+      // color: 'secondary',
       ripple: false,
     }
   }
