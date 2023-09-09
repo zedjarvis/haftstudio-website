@@ -9,13 +9,10 @@
         <VCol cols="12" sm="6" md="4">
           <BlogCard />
         </VCol>
-        <VCol cols="12" sm="6" md="3">
+        <VCol cols="12" sm="6" md="4">
           <!-- <BlogCard /> -->
         </VCol>
-        <VCol cols="12" sm="6" md="3">
-          <!-- <BlogCard /> -->
-        </VCol>
-        <VCol cols="12" sm="6" md="3">
+        <VCol cols="12" sm="6" md="4">
           <!-- <BlogCard /> -->
         </VCol>
       </VRow>
