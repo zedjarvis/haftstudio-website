@@ -27,6 +27,9 @@ import nevaLounge from "@/assets/images/neva_lounge_trimmed_cover.jpg";
           <FeaturedProductCard :image="latusTable" title="Latus Table" designer="Haft Studio" />
         </VCol>
       </VRow>
+      <RouterLink to="/products">
+        <p class="subtitle text-decoration-underline mt-16">SHOP PRODUCTS</p>
+      </RouterLink>
     </VResponsive>
   </CustomContainer>
 </template>
