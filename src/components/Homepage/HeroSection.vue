@@ -27,10 +27,9 @@ const sectionHeight = computed(() => {
 </script>
 
 <template>
-  <section id="hero">
-    <VSheet>
+    <VSheet tag="section" id="hero">
       <VCard rounded="0" elevation="0" :width="width" :height="sectionHeight">
-        <VCarousel :height="sectionHeight" v-model="carouselItem" touch continuous cycle :show-arrows="xs ? false : false"
+        <VCarousel :height="sectionHeight" v-model="carouselItem" touch continuous cycle :show-arrows="false"
           hide-delimiter-background :hide-delimiters="xs">
           <VCarouselItem :value="1" :src="img1" cover />
           <VCarouselItem :value="2" :src="img2" cover />
@@ -45,5 +44,4 @@ const sectionHeight = computed(() => {
         </VCarousel>
       </VCard>
     </VSheet>
-  </section>
 </template>

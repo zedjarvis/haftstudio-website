@@ -67,7 +67,7 @@ const { mdAndUp } = useDisplay()
       <!-- 👉 SEARCH  -->
       <Search />
     </VToolbarItems>
-    <VBtn variant="plain" :size="mdAndUp ? 'small' : 'default'" icon="mdi-account-outline" />
-    <VBtn variant="plain" :size="mdAndUp ? 'small' : 'default'" icon="mdi-shopping-outline" />
+    <VBtn variant="plain" :size="mdAndUp ? 'x-small' : 'default'" icon="mdi-account-outline" />
+    <VBtn variant="plain" :size="mdAndUp ? 'x-small' : 'default'" icon="mdi-shopping-outline" />
   </VToolbar>
 </template>

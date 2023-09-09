@@ -7,7 +7,7 @@ const { smAndDown } = useDisplay()
 </script>
 
 <template>
-  <VBtn class="ml-md-16" @click="dialog = true" :size="smAndDown ? '' : 'small'" variant="plain" icon>
+  <VBtn class="ml-md-16" @click="dialog = true" :size="smAndDown ? '' : 'x-small'" variant="plain" icon>
     <VIcon icon="mdi-magnify"></VIcon>
   </VBtn>
 

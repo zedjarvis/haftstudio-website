@@ -15,11 +15,9 @@ const ID = computed(() => props.sectionId ? props.sectionId : componentId)
 </script>
 
 <template>
-  <section :id="ID">
-    <VSheet class="pb-16" :class="props.sheetStyle" :style="{ width: `${width}px` }">
-      <VContainer class="pt-16 pb-16" :class="props.containerStyle">
-        <slot />
-      </VContainer>
-    </VSheet>
-  </section>
+  <VSheet tag="section" :id="ID" class="pb-16" :class="props.sheetStyle" :style="{ width: `${width}px` }">
+    <VContainer class="pt-16 pb-16" :class="props.containerStyle">
+      <slot />
+    </VContainer>
+  </VSheet>
 </template>
