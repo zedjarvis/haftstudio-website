@@ -47,7 +47,7 @@ const { mdAndUp } = useDisplay()
   </VNavigationDrawer>
 
   <!-- 👉 DESKTOP NAV  -->
-  <VToolbar :elevation="props.elevation ? 3 : undefined" :flat="props.flat" :scroll-behavior="props.scrollBehavior"
+  <VAppBar elevation="props.elevation ? 3 : undefined" :flat="props.flat" :scroll-behavior="props.scrollBehavior"
     scroll-threshold="64" class="pl-md-16 d-flex bg-background">
     <VAppBarNavIcon flat class="d-flex d-md-none" color="secondary" variant="plain" @click="drawer = true">
     </VAppBarNavIcon>
@@ -69,5 +69,5 @@ const { mdAndUp } = useDisplay()
     </VToolbarItems>
     <VBtn variant="plain" :size="mdAndUp ? 'x-small' : 'default'" icon="mdi-account-outline" />
     <VBtn variant="plain" :size="mdAndUp ? 'x-small' : 'default'" icon="mdi-shopping-outline" />
-  </VToolbar>
+  </VAppBar>
 </template>
