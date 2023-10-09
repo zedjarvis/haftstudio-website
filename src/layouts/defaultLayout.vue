@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <TheHeader :elevation="true" />
+  <TheHeader :flat="false" />
   <VMain>
     <RouterView />
   </VMain>

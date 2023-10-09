@@ -5,19 +5,19 @@ import { useDisplay } from 'vuetify';
 // props
 interface Props {
   flat?: boolean;
-  elevation?: boolean;
   scrollBehavior?: 'elevate' | 'elevate hide';
 }
 
 const props = withDefaults(defineProps<Props>(), {
   flat: false,
-  elevation: false,
   scrollBehavior: 'elevate',
 })
 
 // variables
 const drawer = ref<null | boolean>(null)
 const { mdAndUp } = useDisplay()
+
+const { flat, scrollBehavior } = toRefs(props)
 </script>
 
 <template>
@@ -47,10 +47,7 @@ const { mdAndUp } = useDisplay()
   </VNavigationDrawer>
 
   <!-- 👉 DESKTOP NAV  -->
-  <VAppBar elevation="props.elevation ? 3 : undefined" :flat="props.flat" :scroll-behavior="props.scrollBehavior"
-    scroll-threshold="64" class="pl-md-16 d-flex bg-background">
-    <VAppBarNavIcon flat class="d-flex d-md-none" color="secondary" variant="plain" @click="drawer = true">
-    </VAppBarNavIcon>
+  <VAppBar :flat="flat" :scroll-behavior="scrollBehavior" scroll-threshold="64" class="pl-md-16 d-flex bg-background">
     <VAppBarTitle class="ml-md-16">
       <!-- 👉 LOGO  -->
       <TheLogo />
@@ -63,11 +60,13 @@ const { mdAndUp } = useDisplay()
       <Navlink class="mx-3" title="company" />
       <Navlink class="mx-3" title="designers" />
       <!-- <Navlink class="mx-3" title="blog" /> -->
-      <Navlink class="mx-3" title="contact" />
+      <Navlink class="ml-3" title="contact" />
       <!-- 👉 SEARCH  -->
       <Search />
     </VToolbarItems>
-    <VBtn variant="plain" :size="mdAndUp ? 'x-small' : 'default'" icon="mdi-account-outline" />
-    <VBtn variant="plain" :size="mdAndUp ? 'x-small' : 'default'" icon="mdi-shopping-outline" />
+    <VBtn class="d-none d-md-flex" variant="plain" :size="mdAndUp ? 'x-small' : 'default'" icon="mdi-account-outline" />
+    <VBtn class="d-none d-md-flex" variant="plain" :size="mdAndUp ? 'x-small' : 'default'" icon="mdi-shopping-outline" />
+    <VAppBarNavIcon flat class="d-flex d-md-none" color="secondary" variant="plain" @click="drawer = true">
+    </VAppBarNavIcon>
   </VAppBar>
 </template>
