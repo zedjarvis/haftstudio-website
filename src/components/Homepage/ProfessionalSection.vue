@@ -1,10 +1,10 @@
 <script setup lang="ts">
 
 // assets
-import LifestyleImg from '@/assets/images/downloads_lifestyle_images.jpg';
-import DownloadImg from '@/assets/images/downloads_models.jpg';
-import PackshotImg from '@/assets/images/downloads_packshots.jpg';
-import ProductspecImg from '@/assets/images/downloads_products_specifications.jpg';
+import LifestyleImg from '@/assets/images/downloads_lifestyle_images.webp';
+import DownloadImg from '@/assets/images/downloads_models.webp';
+import PackshotImg from '@/assets/images/downloads_packshots.webp';
+import ProductspecImg from '@/assets/images/downloads_products_specifications.webp';
 </script>
 
 <template>

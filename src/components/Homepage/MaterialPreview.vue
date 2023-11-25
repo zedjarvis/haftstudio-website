@@ -5,8 +5,8 @@ import { VueCompareImage } from 'vue3-compare-image';
 // composables
 
 // assets
-import materialImg from '@/assets/images/pexels-maria-1.jpg';
-import plantImg from '@/assets/images/plant-seedlings.jpg';
+import materialImg from '@/assets/images/pexels-maria-1.webp';
+import plantImg from '@/assets/images/plant-seedlings.webp';
 
 // variables
 const { smAndDown } = useDisplay()

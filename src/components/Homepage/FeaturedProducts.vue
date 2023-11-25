@@ -1,10 +1,10 @@
 <script setup lang="ts">
 
 // assets
-import invitoTable from "@/assets/images/invito_table_cover.jpg";
-import latusTable from "@/assets/images/latus_table_cover.jpg";
-import nevaChair from "@/assets/images/neva_chair_cover.jpg";
-import nevaLounge from "@/assets/images/neva_lounge_trimmed_cover.jpg";
+import invitoTable from "@/assets/images/invito_table_cover.webp";
+import latusTable from "@/assets/images/latus_table_cover.webp";
+import nevaChair from "@/assets/images/neva_chair_cover.webp";
+import nevaLounge from "@/assets/images/neva_lounge_trimmed_cover.webp";
 
 </script>
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 // assets
-import chairImg from '@/assets/images/News_2_Mela_Chair.jpg';
+import chairImg from '@/assets/images/News_2_Mela_Chair.webp';
 </script>
 
 <template>
