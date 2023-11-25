@@ -1,6 +1,7 @@
 {
   "name": "haftstudio-website",
   "version": "0.0.1",
+  "type": "module",
   "author": "Cedrouseroll Omondi <omondicedo@gmail.com>",
   "license": "MIT",
   "scripts": {
