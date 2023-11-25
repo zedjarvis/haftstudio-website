@@ -21,6 +21,13 @@ watch(y, () => {
 useHead({
   title: "Home",
 })
+
+definePage({
+  name: 'HomePage',
+  meta: {
+    layout: 'homeLayout'
+  }
+})
 </script>
 
 <template>
@@ -47,12 +54,3 @@ useHead({
   <!-- 👉 BLOG SECTION  -->
   <BlogSection />
 </template>
-
-<route lang="json">
-{
-  "name": "HomePage",
-  "meta": {
-    "layout": "homeLayout"
-  }
-}
-</route>
