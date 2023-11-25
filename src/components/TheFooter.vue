@@ -15,7 +15,7 @@ const { width } = useWindowSize()
       <p class="subtitle text-center">Popular Links</p>
       <VRow no-gutters class="px-md-16">
         <VCol class="d-flex flex-column flex-md-row justify-center py-3">
-          <Navlink class="mx-auto mx-md-6 py-4 py-md-1" url="/" title="home" />
+          <Navlink class="mx-auto mx-md-6 py-4 py-md-2" url="/" title="home" />
           <VDivider :vertical="!xs"></VDivider>
           <Navlink class="mx-auto mx-md-6 py-4 py-md-2" title="products" />
           <VDivider :vertical="!xs"></VDivider>
